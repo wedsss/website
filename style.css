@@ -1,0 +1,223 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background:#000;
+    color:#fff;
+    line-height:1.7;
+    min-height:100vh;
+}
+
+header {
+    position:fixed;
+    top:0; left:0; right:0;
+    background:rgba(0,0,0,0.95);
+    padding:20px 40px;
+    z-index:1000;
+    backdrop-filter:blur(10px);
+}
+.logo img { height: 60px; }
+nav ul {
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    gap:50px;
+    margin-top:20px;
+}
+nav a {
+    color:#fff;
+    text-decoration:none;
+    font-size:18px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    transition:0.3s;
+}
+nav a:hover, nav a.active { color:#999; }
+
+h1 {
+    font-size:90px;
+    letter-spacing:12px;
+    text-align:center;
+    margin:140px 0 60px;
+    text-transform:uppercase;
+}
+
+.hero {
+   height:100vh;
+    background:url('images/icarus .jpg') center/cover no-repeat;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position: relative;
+    z-index: 1;
+}
+.hero h1 { font-size:110px; margin-bottom:10px; }
+.play-button {
+    margin-top:40px;
+    padding:18px 70px;
+    border:2px solid #fff;
+    font-size:22px;
+    cursor:pointer;
+    transition:0.4s;
+}
+.play-button:hover { background:#fff; color:#000; }
+
+.about {
+    padding:160px 40px 120px;
+    max-width:1100px;
+    margin:0 auto;
+    text-align:center;
+}
+.about p { font-size:20px; margin:30px 0; line-height:1.8; }
+.member img {
+    width:380px;
+    height:380px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid #222;
+    margin:40px 0;
+}
+.member h2 {
+    font-size:50px;
+    letter-spacing:8px;
+    margin:20px 0 10px;
+}
+.member .role {
+    font-size:20px;
+    color:#999;
+    letter-spacing:4px;
+    margin-bottom:60px;
+}
+
+.music-page { padding:140px 40px 100px; }
+.albums {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(320px,1fr));
+    gap:60px;
+    max-width:1400px;
+    margin:0 auto;
+}
+.album {
+    text-align:center;
+    transition:0.4s;
+}
+.album:hover { transform:translateY(-10px); }
+.album img {
+    width:100%;
+    border-radius:12px;
+    filter:grayscale(100%);
+    transition:0.5s;
+}
+.album:hover img { filter:grayscale(0%); }
+.album h3 { margin:20px 0 8px; font-size:26px; }
+.track-list { margin-top:20px; display:flex; flex-direction:column; gap:12px; }
+.track {
+    background:rgba(255,255,255,0.07);
+    padding:14px;
+    border-radius:8px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.track audio { width:210px; height:38px; }
+
+/* Тур */
+.tour {
+    padding: 160px 40px 120px;
+    text-align: center;
+}
+.tour-dates {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+    border-bottom: 1px solid #222;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.date-info {
+    text-align: left;
+    font-size: 28px;
+}
+.day { font-size: 80px; line-height: 1; }
+.month { font-size: 24px; letter-spacing: 4px; }
+.year { font-size: 18px; color: #777; }
+.info { text-align: left; }
+.city { font-size: 36px; letter-spacing: 3px; }
+.venue { font-size: 22px; color: #999; margin-top: 8px; }
+.ticket-btn {
+    padding: 14px 40px;
+    border: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.ticket-btn:hover { background: #fff; color: #000; }
+.sold { background: #333 !important; color: #666 !important; border-color: #333; cursor: not-allowed; }
+
+/* Контакты */
+.contact {
+    padding: 160px 40px 120px;
+    text-align: center;
+}
+.contact-info {
+    font-size: 24px;
+    margin-bottom: 80px;
+    line-height: 2;
+}
+.contact-info a { color: #fff; text-decoration: underline; }
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.contact-form input,
+.contact-form textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #fff;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder { color: #888; }
+.contact-form button {
+    align-self: center;
+    padding: 16px 70px;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.contact-form button:hover {
+    background: #fff;
+    color: #000;
+}
+
+footer {
+    text-align:center;
+    padding:60px 20px;
+    border-top:1px solid #222;
+    font-size:14px;
+    margin-top:100px;
+}
+
+@media (max-width:768px) {
+    h1 { font-size:60px; }
+    nav ul { flex-direction:column; gap:15px; }
+    .hero h1 { font-size:70px; }
+}
