@@ -1,0 +1,231 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background:#000;
+    color:#fff;
+    line-height:1.7;
+    min-height:100vh;
+    overflow-x: hidden;
+}
+
+header {
+    position:fixed;
+    top:0; left:0; right:0;
+    background:rgba(0,0,0,0.95);
+    padding:15px 20px;
+    z-index:1000;
+    backdrop-filter:blur(10px);
+}
+.logo img { height:40px; }
+
+nav ul {
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin-top:15px;
+    flex-wrap: wrap;
+}
+nav a {
+    color:#fff;
+    text-decoration:none;
+    font-size:17px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    transition:0.3s;
+}
+nav a:hover, nav a.active { color:#999; }
+
+.hero {
+    height:100vh;
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                url('images/icarus.jpg') center/cover no-repeat;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding: 0 20px;
+}
+.hero h1 {
+    font-size: 80px;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+.play-button {
+    padding:18px 60px;
+    border:2px solid #fff;
+    font-size:20px;
+    cursor:pointer;
+    transition:0.4s;
+    background: transparent;
+}
+.play-button:hover { background:#fff; color:#000; }
+
+h1 {
+    font-size:90px;
+    letter-spacing:12px;
+    text-align:center;
+    margin:140px 0 60px;
+    text-transform:uppercase;
+}
+
+.about {
+    padding:160px 20px 120px;
+    max-width:1100px;
+    margin:0 auto;
+    text-align:center;
+}
+.member img {
+    width:320px;
+    height:320px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid #222;
+    margin:40px 0;
+}
+.member h2 {
+    font-size:48px;
+    letter-spacing:8px;
+}
+
+.music-page { padding:140px 20px 100px; }
+.albums {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap:50px;
+    max-width:1400px;
+    margin:0 auto;
+}
+.album {
+    text-align:center;
+    transition:0.4s;
+}
+.album:hover { transform:translateY(-10px); }
+.album img {
+    width:100%;
+    border-radius:12px;
+    filter:grayscale(100%);
+    transition:0.5s;
+}
+.album:hover img { filter:grayscale(0%); }
+.track audio { width:100%; height:40px; margin-top:10px; }
+
+.tour {
+    padding:160px 20px 120px;
+    text-align:center;
+}
+.tour-dates {
+    max-width:900px;
+    margin:0 auto;
+}
+.date {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:40px 0;
+    border-bottom:1px solid #222;
+    flex-wrap:wrap;
+    gap:20px;
+}
+.date-info { text-align:center; }
+.day { font-size:70px; line-height:1; }
+.month { font-size:22px; letter-spacing:4px; }
+.city { font-size:32px; letter-spacing:3px; }
+.ticket-btn {
+    padding:14px 40px;
+    border:2px solid #fff;
+    color:#fff;
+    text-decoration:none;
+    text-transform:uppercase;
+    transition:0.3s;
+}
+.ticket-btn:hover { background:#fff; color:#000; }
+.sold { background:#333; border-color:#333; cursor:not-allowed; }
+
+.contact {
+    padding:160px 20px 120px;
+    text-align:center;
+}
+.contact-info { font-size:22px; margin-bottom:70px; line-height:2; }
+.contact-form {
+    max-width:600px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+.contact-form input,
+.contact-form textarea {
+    background:transparent;
+    border:none;
+    border-bottom:2px solid #fff;
+    padding:15px 0;
+    font-size:18px;
+    color:#fff;
+}
+.contact-form button {
+    padding:16px 70px;
+    background:transparent;
+    border:2px solid #fff;
+    color:#fff;
+    font-size:18px;
+    text-transform:uppercase;
+    cursor:pointer;
+    align-self:center;
+    transition:0.4s;
+}
+.contact-form button:hover {
+    background:#fff;
+    color:#000;
+}
+
+footer {
+    text-align:center;
+    padding:60px 20px;
+    border-top:1px solid #222;
+    font-size:14px;
+}
+
+@media (max-width: 768px) {
+    h1 { font-size:50px; letter-spacing:6px; margin:100px 0 40px; }
+    
+    .hero h1 { font-size:50px; letter-spacing:6px; }
+    .hero p { font-size:18px; }
+    .play-button { padding:16px 50px; font-size:18px; }
+
+    nav ul {
+        flex-direction:column;
+        gap:20px;
+        text-align:center;
+    }
+    nav a { font-size:16px; }
+
+    .member img { width:260px; height:260px; }
+    .member h2 { font-size:36px; }
+
+    .albums { gap:40px; padding:0 10px; }
+    .album h3 { font-size:22px; }
+
+    .date {
+        flex-direction:column;
+        text-align:center;
+    }
+    .day { font-size:60px; }
+    .city { font-size:28px; }
+
+    .contact-info { font-size:19px; }
+    .contact-form { padding:0 10px; }
+}
+
+@media (max-width: 480px) {
+    .hero h1 { font-size:42px; }
+    h1 { font-size:42px; }
+    .play-button { padding:14px 40px; font-size:17px; }
+}
